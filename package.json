@@ -1,0 +1,24 @@
+{
+  "name": "react-native-cn-buttonselect",
+  "version": "1.0.0",
+  "description": "Multiple selection plugin for React Native.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CruzNadin/react-native-cn-buttonselect.git"
+  },
+  "keywords": [
+    "react-native",
+    "multi-select",
+    "react-native-button-select"
+  ],
+  "author": "CruzNadin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CruzNadin/react-native-cn-buttonselect/issues"
+  },
+  "homepage": "https://github.com/CruzNadin/react-native-cn-buttonselect#readme"
+}
