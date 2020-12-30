@@ -31,6 +31,7 @@ import SelectBtn from "react-native-cn-buttonselect";
        <SelectBtn 
             data={{title: "Select 1", subtitle: "Select 1 subtitle"}} 
             selectedBtn={(e) => console.log(e)} 
+            onPressBtn={() => alert("Click")}
             animationTypes={['rotate']}
             initial={1}
             icon={
@@ -51,6 +52,7 @@ import SelectBtn from "react-native-cn-buttonselect";
 | ------------- | ------------- | ------------- |
 | data  | radio buttons label array, you can use any data in object, label is necessary for showing in radio button | [] |
 | selectedBtn  | callback when radio button clicked | - |
+| onPressBtn  | callback when box button clicked | - |
 | icon  | you can use any icon for button, see the example | - |
 | box  | box of for items  | true |
 | initial  | This is used when this component is enabled use only 1. | 0 |
