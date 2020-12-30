@@ -125,7 +125,7 @@ class SelectBtn extends React.Component {
 
 	render() {
 		let { activeIndex, fadeAnim, animations } = this.state;
-        let { boxStyle, style, circleSize, textStyle, data, icon, activeColor, deactiveColor, boxActiveBgColor, boxDeactiveBgColor, box, textColor } = this.props;
+        let { boxStyle, style, circleSize, textStyle, data, icon, onPressBtn, activeColor, deactiveColor, boxActiveBgColor, boxDeactiveBgColor, box, textColor } = this.props;
         const newList = [data];
 		return (
             <View style={style}>
@@ -140,6 +140,10 @@ class SelectBtn extends React.Component {
                                     borderColor: activeIndex === index ? activeColor : deactiveColor
                                 }
                             , boxStyle]}
+                            activeOpacity={0.9}
+                            onPress={onPressBtn}
+                        >
+                            <TouchableOpacity
                             activeOpacity={0.9}
                             onPress={() => this._changeRadio(item, index)}
                         >
@@ -176,7 +180,7 @@ class SelectBtn extends React.Component {
                                     </Animated.View>
                                 </View>
                             </View>
-
+                            </TouchableOpacity>
                             <View style={[styles.centerProductBox]}>
                                 <Text style={[{
                                     color: textColor
@@ -259,6 +263,7 @@ SelectBtn.propTypes = {
     data: PropTypes.object,
     animationTypes: PropTypes.array,
     selectedBtn: PropTypes.func,
+    onPressBtn: PropTypes.func,
     activeColor: PropTypes.string,
     deactiveColor: PropTypes.string,
     boxActiveBgColor: PropTypes.string,
@@ -277,6 +282,7 @@ SelectBtn.defaultProps = {
     data: [],
     animationTypes: [],
     selectedBtn: () => {},
+    onPressBtn: () => {},
     activeColor: '#03a9f4',
     deactiveColor: '#e2e2e2',
     boxActiveBgColor: '#e1f5fe33',
